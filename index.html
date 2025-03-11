@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  -->
+    <!-- Pentru register:
+        - nume
+        - prenume
+        - email
+        - parola
+        - numar telefon
+        - data nastere
+        - intrebare de securitate
+        - termeni si conditii
+        - an studiu
+    -->
+        <form>
+            <h1>Register</h1>
+            <div>
+                <label for="name">Nume</label>
+                <input type="text" name="nume" id="name"></input>
+            </div>
+            <div>
+                <label for="prenume">Prenume</label>
+                <input type="text" name="prenume" id="prenume" placeholder="prenumele tau"></input>
+            </div>
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="email@gmail.com"></input>
+            </div>
+            <div>
+                <label for="pass">Parola</label>
+                <input type="password" name="parola" id="pass"></input>
+            </div>
+
+            <div>
+                <label for="tel">Telefon</label>
+                <input type="tel" pattern="[0-9]{4}" name="telefon" id="tel"></input>
+            </div>
+
+            <div>
+                <label for="birth">Data nastere</label>
+                <input type="date" name="date" id="birth"></input>
+            </div>
+
+            <div>
+                <label for="sec">Intrebare de securitate 1+1=</label>
+                <input type="number" min="0" max="10" patter="[2]" name="sec" id="sec"></input>
+            </div>
+
+            <div>
+                <label for="termeni">Termeni si conditii</label>
+                <input type="checkbox" name="term" id="termeni" ></input>
+                <!-- <input type="checkbox" name="term" id="termeni" checked ></input>  -->            
+            </div>
+            <div>
+                <label for="anStudiu">Anul de studii</label>
+                <select name="anStudiu" id="anStudiu">
+                    <option value="1">Anul 1</option>
+                    <option value="2">Anul 2</option>
+                    <option value="3">Anul 3</option>
+                    <option value="4">Anul 4</option>
+                </select>
+            </div>
+            <div>
+                <label for="referral">Cod invitatie</label>
+                <input 
+                    type="text" 
+                    name="referral" 
+                    id="referral" 
+                    readonly 
+                    disabled
+                    value="reducere50"></input>
+            </div>
+            <input type="reset" value="Reseteaza">
+            <input type="submit" value="Trimite">
+        </form>
+</body>
+</html>
