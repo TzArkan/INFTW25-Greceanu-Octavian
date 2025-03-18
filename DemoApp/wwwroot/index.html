@@ -20,6 +20,7 @@
     -->
         <form>
             <h1>Register</h1>
+            <form method="post" action="register">
             <div>
                 <label for="name">Nume</label>
                 <input type="text" name="nume" id="name"></input>
@@ -80,5 +81,21 @@
             <input type="reset" value="Reseteaza">
             <input type="submit" value="Trimite">
         </form>
+        <h1>Comanda</h1>
+        <form method="Post" action="Register">
+            <label for="topping">Topping</label>
+            <select name="topping" size="3" id="topping" multiple>
+                <option value="capsuni">Capsuni</option>
+                <option value="afine">Afine</option>
+                <option value="ciocolata">Ciocolata</option>
+            </select>
+        <div>
+            <input type="radio" name="size" value="s" id="s">Small</input>
+            <input type="radio" name="size" value="l" id="l">Large</input>
+            <input type="radio" name="size" disabled value="m" id="m">Medium</input>
+            
+        </div>
+            <input type="submit" value="Register" />
+            <input type="reset" value="Reset" />
 </body>
 </html>
