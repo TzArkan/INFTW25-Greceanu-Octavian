@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+    <script src="scriptJson.js"></script>
+</head>
+<body>
+
+    <ul id="l1"> </ul>
+    <ul id="l2"> </ul>
+
+    <script>
+
+        function afisareLocalitati(localitati, id){
+            const parinte = document.getElementById(id)
+            localitati.forEach(localitate => {
+                if(localitate.print == false) return;
+                const li = document.createElement("li");
+                li.innerText = ` ${localitate.name} ${localitate.lat}`;
+                parinte.appendChild(li);
+            });
+
+        }
+
+        fetchJson("localitati.json", afisareLocalitati, "l1");
+        xhrJson("localitati.json", afisareLocalitati, "l1")
+    </script>
+</body>
+</html>
